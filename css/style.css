@@ -1,5 +1,5 @@
 .page-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f3f6f9;
   padding: 30px;
   display: flex;
@@ -36,9 +36,9 @@ form {
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 0px;
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.875rem;
   line-height: 1.75;
   padding: 6px 16px;
@@ -89,9 +89,9 @@ form {
   margin: 0;
   margin-bottom: 5px;
 
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.875rem;
   line-height: 1.75;
   font-weight: 700;
@@ -99,4 +99,65 @@ form {
 
 .response-container span {
   font-weight: 400;
+}
+
+.user__block {
+  border: 2px solid lightslategray;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.user__description {
+  color: lightblue;
+  font-size: large;
+  font-weight: bold;
+  padding-left: 15px;
+}
+.button {
+  height: 50px;
+  width: 300px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-weight: 800;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: lightgreen;
+  margin-top: 10px;
+}
+
+.validation__number {
+  height: 30px;
+  width: 200px;
+  outline: none;
+  border: 2px solid lightslategray;
+  border-radius: 5px;
+}
+.validation__text-main{
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+.validation__text {
+  font-size: large;
+  font-weight: bold;
+  color: red;
+}
+.validation__button {
+  display: inline-block;
+  height: 50px;
+  width: 300px;
+  background: lightcyan;
+  border-radius: 15px;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+.validation__text--hidden {
+  display: none;
+}
+.validation__text--black {
+  color: black;
 }
