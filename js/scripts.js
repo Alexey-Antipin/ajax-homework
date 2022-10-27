@@ -2,6 +2,10 @@ const loadBtn = document.querySelector(".js-load");
 const resultsContainer = document.querySelector(".js-results");
 const searchInput = document.querySelector(".js-input");
 const resultsUsers = document.querySelector(".user__container");
+const dontNum = document.getElementById("dont-num");
+const fieldEmpty = document.getElementById("field-empty");
+const incorrectInterval = document.getElementById("incorrect-interval");
+const inputNumber = document.getElementById("input-number");
 
 loadBtn.addEventListener("click", async function (evt) {
   const searchValue = searchInput.value.trim().toLowerCase();
@@ -50,3 +54,43 @@ async function getUser() {
     console.error(error);
   }
 }
+
+async function validationNumber() {
+  try {
+    let value = inputNumber.value;
+    fieldEmpty.classList.add("validation__text--hidden");
+    incorrectInterval.classList.add("validation__text--hidden");
+    dontNum.classList.add("validation__text--hidden");
+
+    if (value == "") {
+      fieldEmpty.classList.remove("validation__text--hidden");
+      return;
+    }
+    if (value < 5 || value > 10) {
+      incorrectInterval.classList.remove("validation__text--hidden");
+      return;
+    }
+    if (isNaN(value)) {
+      dontNum.classList.remove("validation__text--hidden");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function lottery() {
+  console.log("Вы начали игру");
+
+  let promise = await new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      Math.random(0) > 0.5 ? resolve() : reject("Вы промахнулись");
+    }, 2000);
+  });
+  return promise;
+}
+
+lottery()
+  .then(() => console.log("Вы выиграли"))
+  .then(() => console.log("Вам заплатили"))
+  .catch(() => console.log("Вы проиграли"))
+  .finally(() => console.log("Игра закончена"));

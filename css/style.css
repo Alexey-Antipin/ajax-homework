@@ -125,3 +125,39 @@ form {
   background: lightgreen;
   margin-top: 10px;
 }
+
+.validation__number {
+  height: 30px;
+  width: 200px;
+  outline: none;
+  border: 2px solid lightslategray;
+  border-radius: 5px;
+}
+.validation__text-main{
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+.validation__text {
+  font-size: large;
+  font-weight: bold;
+  color: red;
+}
+.validation__button {
+  display: inline-block;
+  height: 50px;
+  width: 300px;
+  background: lightcyan;
+  border-radius: 15px;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+.validation__text--hidden {
+  display: none;
+}
+.validation__text--black {
+  color: black;
+}

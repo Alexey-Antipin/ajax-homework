@@ -27,8 +27,39 @@
       <div class="results-container js-results"></div>
 
       <div class="users">
-        <button class="button" onClick="getUser()">Список Пользователей</button>
+        <button class="button" onClick="getUser()">
+          Список Пользователей
+        </button>
         <div class="user__container"></div>
+      </div>
+
+      <div class="validation">
+        <p class="validation__text-main">Впиши число.</p>
+        <input
+          class="validation__number"
+          maxlength="15"
+          id="input-number"
+        /><button class="validation__button" onClick="validationNumber()">
+          отправить
+        </button>
+        <p class="validation__text validation__text--hidden" id="dont-num">
+          Это не число<span class="validation__text--black">.</span>
+        </p>
+        <p
+          class="validation__text validation__text--hidden"
+          id="field-empty"
+        >
+          Поле пустое<span class="validation__text--black">.</span>
+        </p>
+        <p
+          class="validation__text validation__text--hidden"
+          id="incorrect-interval"
+        >
+          Число меньше 5, либо больше 10<span
+            class="validation__text--black"
+            >.</span
+          >
+        </p>
       </div>
     </div>
   </body>
